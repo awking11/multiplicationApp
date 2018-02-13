@@ -1,0 +1,77 @@
+header {
+	text-align: center;
+	font-size: 5em;
+	padding: 30px;
+}
+
+.buttons {
+	display: inline-block;
+	margin-left: 375px;
+}
+
+.buttons #Ones, #Twos, #Threes, #Fours, #Fives, #Sixes, #Sevens, #Eights, #Nines {
+	width: 50px;
+	padding: 1.2em 1em 0;
+	box-shadow:0 0 5px;
+	margin:1em;
+	border-radius:0.25em;
+	text-align: justify;
+	font-size: 15px;
+	background-color:#FC0;
+	color: darkblue;
+	font-weight: bold;
+}
+
+.grid {
+	position: absolute;
+        left: 57%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        height: 50%;
+        padding: 20px;  
+        color: #FC0;
+		text-align: center;
+		font-weight: bold;
+	}
+.cardFlip{ width: 240px; height: 200px; margin: 10px; float: left;}
+.cardFlip  > #front {
+	position: absolute;
+	-webkit-transform: perspective( 600px ) rotateY(0deg);
+	transform: perspective ( 600px ) rotateY(0deg);
+	background:darkblue; width: 240px; height: 200px; border-radius: 7px;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+	text-align: center;
+	
+}
+
+.cardFlip > #back {
+	position: absolute;
+	-webkit-transform: perspective( 600px ) rotateY(180deg);
+	transform: perspective (600px) rotateY(180deg);
+	background:darkblue; width: 240px; height: 200px; border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+.cardFlip:hover > #front {
+	-webkit-transform: perspective ( 600px ) rotateY(-180deg);
+	transform: perspective( 600px ) rotateY(-180deg);
+}
+
+.cardFlip:hover > #back {
+	-webkit-transform: perspective (600px) rotateY(0deg);
+	transform: perspective( 600px ) rotateY(0deg);
+}
+
+p {
+	padding: 70px;
+	font-size: 35px;
+	margin: 0px;
+	top: 50%;
+	left: 50%;
+}
